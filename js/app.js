@@ -1,12 +1,18 @@
-var a, b;
+var a = {
+    greeting: 'Hello'
+}
 
-a = {
-    greetings: 'Hi!'
-};
+var b = a;
 
-b = a;
+console.log(a);
+console.log(b);
 
-a.greetings = 'Hello!';
+function changeGreeting(obj) {
+    obj.greeting = 'Hola!';
+}
 
-console.log(a.greetings);
-console.log(b.greetings);
+changeGreeting(b);
+
+console.log(a);
+console.log(b);
+
