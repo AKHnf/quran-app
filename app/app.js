@@ -1,5 +1,17 @@
 (function (window, document, undefined) {
     'use strict';
     
-    var quranApp = angular.module('quranApp', ['ngResource', 'ngRoute']);
+    angular
+        .module('quranApp', ['ngResource', 'ngRoute'])
+        .config(function ($routeProvider) {
+        
+            $routeProvider
+                .when('/', {
+                    templateUrl: '.partials/surah-listing.html',
+                    controller: 'controllers/ListingCtrl'
+
+                });
+
+        });
+    
 }(window, document));
