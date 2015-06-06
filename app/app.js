@@ -1,17 +1,18 @@
 (function (window, document, undefined) {
     'use strict';
     
-    angular
-        .module('quranApp', ['ngResource', 'ngRoute'])
-        .config(function ($routeProvider) {
-        
-            $routeProvider
-                .when('/', {
-                    templateUrl: '.partials/surah-listing.html',
-                    controller: 'controllers/ListingCtrl'
-
-                });
-
-        });
+    var quranApp = angular.module('quranApp', ['ngResource', 'ngRoute']);
+    
+    quranApp.config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'partials/surah-listing.html',
+                controller: 'ListingCtrl'
+            })
+            .when('/verse', {
+                templateUrl: 'partials/verse-view.html',
+                controller: 'VerseCtrl'
+            });
+    });
     
 }(window, document));
