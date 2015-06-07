@@ -1,1 +1,6 @@
-angular.module('quranApp').service();
+(function () {
+    'use strict';
+    
+    angular.module('quranApp').service('ListingService', ['$scope', function ($scope) {
+    }]);
+}());
