@@ -1,6 +1,4 @@
-<p>Surah Listing</p>
-
-<a href="#/verse">Verse</a>
+<!-- Do something you love - be passionate about your work. Take care of your body. Never stop learning and challenging yourself. -->
 
 <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
@@ -10,5 +8,20 @@
                 <button class="btn btn-default" type="button">Go!</button>
             </span>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <table class="table">
+            <tr ng-repeat="surah in surahListing">
+                <th scope="row">
+                    <a href="#/verse">
+                        <span id="surah-num" class="col-lg-1 col-lg-offset-2">{{ surah.number }}</span>
+                        <span id="surah-engname" class="col-lg-2 col-lg-offset-2">{{ surah.englishName }}</span>
+                        <span id="surah-arabname" class="col-lg-2 col-lg-offset-2">{{ surah.arabicName }}</span>
+                    </a>
+                </th>
+            </tr>
+        </table>
     </div>
 </div>

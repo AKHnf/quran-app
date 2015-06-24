@@ -1,1 +1,28 @@
 <p>Single Verse View</p>
+
+<!-- div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        &nbsp;
+        <ol class="list-group">
+            <li class="list-group-item" ng-repeat="(key, value) in surahResult.quran">
+                <pre>{{ key | json }}</pre>
+                <ol class="list-group" ng-repeat="(k, v) in value | orderBy:'+v.surah'">
+                    <li class="list-group-items">
+                        <pre>{{ v.surah | json }}</pre>
+                    </li>
+                </ol>                
+            </li>
+        </ol>
+    </div>
+</div -->
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        &nbsp;
+        <ol class="list-group">
+            <li class="list-group-item" ng-repeat="s in surahResult.quran">
+                <pre>{{ s['2']['verse'] | json }}</pre>               
+            </li>
+        </ol>
+    </div>
+</div>

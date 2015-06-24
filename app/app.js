@@ -12,6 +12,9 @@
             .when('/verse', {
                 templateUrl: 'partials/verse-view.html',
                 controller: 'VerseCtrl'
+            }).when('/verse/:num', {
+                templateUrl: 'partials/verse-view.html',
+                controller: 'VerseCtrl'
             });
     });
     
